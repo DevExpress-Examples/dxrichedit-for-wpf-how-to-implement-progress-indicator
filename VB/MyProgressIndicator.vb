@@ -8,8 +8,6 @@
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E3075
 
-
-Imports Microsoft.VisualBasic
 Imports System
 Imports System.Collections.Generic
 Imports System.Text
@@ -23,6 +21,7 @@ Namespace ProgressIndicator
 	#Region "#myprogressindicator"
 	Friend Class MyProgressIndicatorService
 		Implements IProgressIndicationService
+
 		Private _Indicator As ProgressBarEdit
 		Public Property Indicator() As ProgressBarEdit
 			Get
@@ -39,7 +38,7 @@ Namespace ProgressIndicator
 
 		#Region "IProgressIndicationService Members"
 
-		Private Sub Begin(ByVal displayName As String, ByVal minProgress As Integer, ByVal maxProgress As Integer, ByVal currentProgress As Integer) Implements IProgressIndicationService.Begin
+		Private Sub IProgressIndicationService_Begin(ByVal displayName As String, ByVal minProgress As Integer, ByVal maxProgress As Integer, ByVal currentProgress As Integer) Implements IProgressIndicationService.Begin
 			_Indicator.Minimum = minProgress
 			_Indicator.Maximum = maxProgress
 			_Indicator.EditValue = currentProgress
@@ -47,25 +46,22 @@ Namespace ProgressIndicator
 			Refresh()
 		End Sub
 
-		Private Sub [End]() Implements IProgressIndicationService.End
+		Private Sub IProgressIndicationService_End() Implements IProgressIndicationService.End
 			_Indicator.Visibility = System.Windows.Visibility.Collapsed
 			Refresh()
 		End Sub
 
-		Private Sub SetProgress(ByVal currentProgress As Integer) Implements IProgressIndicationService.SetProgress
+		Private Sub IProgressIndicationService_SetProgress(ByVal currentProgress As Integer) Implements IProgressIndicationService.SetProgress
 			_Indicator.EditValue = currentProgress
 			Refresh()
 		End Sub
 		#End Region
 
 		Private Sub Refresh()
-			Dim emptyDelegate As Action = Function() AnonymousMethod1()
+			Dim emptyDelegate As Action = Sub()
+			End Sub
 			_Indicator.Dispatcher.Invoke(DispatcherPriority.Render, emptyDelegate)
 		End Sub
-		
-		Private Function AnonymousMethod1() As Boolean
-			Return True
-		End Function
 	End Class
 #End Region ' #myprogressindicator
 End Namespace

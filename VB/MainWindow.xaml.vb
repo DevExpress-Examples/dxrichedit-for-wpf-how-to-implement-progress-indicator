@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Windows
 Imports DevExpress.XtraRichEdit.API.Native
 Imports DevExpress.XtraRichEdit
@@ -14,6 +13,7 @@ Namespace ProgressIndicator
 	''' </summary>
 	Partial Public Class MainWindow
 		Inherits Window
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
@@ -33,8 +33,7 @@ Namespace ProgressIndicator
 
 		Private Sub richEditControl1_MailMergeStarted(ByVal sender As Object, ByVal e As MailMergeStartedEventArgs)
 '			#Region "#servicesubst"
-		            richEditControl1.ReplaceService(Of IProgressIndicationService) _
-		 (New MyProgressIndicatorService(richEditControl1, Me.progressBarControl1))
+		   richEditControl1.ReplaceService(Of IProgressIndicationService) (New MyProgressIndicatorService(richEditControl1, Me.progressBarControl1))
 '			#End Region ' #servicesubst
 		End Sub
 

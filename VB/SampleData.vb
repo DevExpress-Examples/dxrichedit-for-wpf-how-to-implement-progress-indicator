@@ -8,8 +8,6 @@
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E3075
 
-
-Imports Microsoft.VisualBasic
 Imports System
 Imports System.Collections.Generic
 Imports System.Text
@@ -18,6 +16,7 @@ Imports System.Collections
 Namespace ProgressIndicator
 	Friend Class SampleData
 		Inherits ArrayList
+
 		Public Sub New()
 			Add(New AddresseeRecord("Maria", "Alfreds Futterkiste", "Obere Str. 57, Berlin"))
 			Add(New AddresseeRecord("Ana", "Ana Trujillo Emparedados y helados", "Avda. de la Constitucion 2222, Mexico D.F."))
