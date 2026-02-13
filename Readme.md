@@ -17,7 +17,7 @@ This example demonstrates how to utilize the <strong>IProgressIndicationService<
 * [MyProgressIndicator.cs](./CS/MyProgressIndicator.cs) (VB: [MyProgressIndicator.vb](./VB/MyProgressIndicator.vb))
 * [SampleData.cs](./CS/SampleData.cs) (VB: [SampleData.vb](./VB/SampleData.vb))
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=dxrichedit-for-wpf-how-to-implement-progress-indicator&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=dxrichedit-for-wpf-how-to-implement-progress-indicator&~~~was_helpful=no)
 
