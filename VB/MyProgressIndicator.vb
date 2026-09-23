@@ -39,12 +39,12 @@ Namespace ProgressIndicator
             _Indicator.Minimum = minProgress
             _Indicator.Maximum = maxProgress
             _Indicator.EditValue = currentProgress
-            _Indicator.Visibility = System.Windows.Visibility.Visible
+            _Indicator.Visibility = Windows.Visibility.Visible
             Refresh()
         End Sub
 
         Private Sub [End]() Implements IProgressIndicationService.End
-            _Indicator.Visibility = System.Windows.Visibility.Collapsed
+            _Indicator.Visibility = Windows.Visibility.Collapsed
             Refresh()
         End Sub
 
